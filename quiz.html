@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interface</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="header">
+            <div class="logo">Logo</div>
+            <div class="test-name">TEST NAME</div>
+        </div>
+
+        <div class="quiz-info">
+            <div class="quiz-score">Quiz : 1</div>
+            <div class="quiz-timer"  id="quiz-timer">03:00 min</div>
+        </div>
+
+        <div class="quiz-question" id="quiz-question">
+            <p>1. Which space agency has decided to carry out first all-female spacewalk at the International Space Station (ISS)?</p>
+        </div>
+
+        <div class="quiz-options">
+            <button class="option" onclick="submitAnswer('Roscosmos')">A. Roscosmos</button>
+            <button class="option" onclick="submitAnswer('NASA')">B. NASA</button>
+            <button class="option"onclick="submitAnswer('ISRO')">C. ISRO</button>
+            <button class="option" onclick="submitAnswer('JAXA')">D. JAXA</button>
+        </div>
+
+        <div class="quiz-navigation">
+            <button class="nav-button">PREVIOUS</button>
+            <button class="nav-button next">NEXT</button>
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 180; 
+        const timerElement = document.getElementById('quiz-timer');
+        const quizElement = document.getElementById('quiz-question');
+
+        const countdown = setInterval(() => {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+
+            timerElement.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                timerElement.textContent = "Time's up!";
+                quizElement.style.display = 'none'; 
+                alert("Time is up! Please submit your answers.");
+            }
+
+            timeLeft--;
+        }, 1000);
+
+        function submitAnswer(answer) {
+            alert(`You selected: ${answer}`);
+
+            clearInterval(countdown); 
+        }
+    </script>
+</body>
+</html>

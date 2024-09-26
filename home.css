@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.home{
+    
+    position: relative;
+      height: 100vh;
+      width: 100%;
+      background-image: url('home-img.jpg');
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+      background-position: center;
+}
+h1{
+     text-align: left;
+     padding-top: 150px;
+     padding-left: 5%;
+
+     font-size: 5em;
+     color: white;
+     
+}
+h3{
+    text-align: left;
+    padding-top: 20px;
+    font-size: 3em;
+    padding-left: 10%;
+    color: white;
+}
+.button1{
+    text-align: left;
+    padding: 20px;
+    margin-right: 7px;
+    padding-left: 15%;
+   
+}
+
+button {
+    font-size: 17px;
+    padding: 1em 2.7em;
+    font-weight: 500;
+    background: #0d1520;
+    color: white;
+    
+    border: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.6em;
+    cursor: pointer;
+  }
+  
+ 
+/* From Uiverse.io by vinodjangid07 */ 
+.Btn {
+  position: relative;
+  width: 150px;
+  height: 55px;
+  border-radius: 45px;
+  border: none;
+  background-color: rgb(151, 95, 255);
+  color: white;
+  box-shadow: 0px 10px 10px rgb(210, 187, 253) inset,
+  0px 5px 10px rgba(5, 5, 5, 0.212),
+  0px -10px 10px rgb(124, 54, 255) inset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Btn::before {
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  background-color: rgba(250, 250, 250, 0.678);
+  content: "";
+  filter: blur(1px);
+  top: 7px;
+  border-radius: 50%;
+}
+
+.Btn::after {
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  background-color: rgba(250, 250, 250, 0.137);
+  content: "";
+  filter: blur(1px);
+  bottom: 7px;
+  border-radius: 50%;
+}
+
+.Btn:hover {
+  animation: jello-horizontal 0.9s both;
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+
+  
+  .modal {
+   justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.modal-content {
+    
+    padding: 215px;
+    background-image: url('pic.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+    margin-top: 20px;
+    margin-right: 45px;
+    border-radius: 10px;
+   
+}
+.modal-header{
+     display: flex;
+     justify-content: center;
+     justify-items: center;
+     width: 100%;
+     height: 100%;
+    
+}
+
+
+
+
+
+
+
+
+
